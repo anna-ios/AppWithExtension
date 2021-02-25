@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppWithExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HT9-Xm-5xO">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mHn-fj-8ow">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3iu-7e-ahg"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Все суф."/>
+                                            <segment title="Топ 3б. суф."/>
+                                            <segment title="Топ 5б. суф."/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GSf-tE-kQI"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivP-hV-xPu">
+                                        <rect key="frame" x="0.0" y="50" width="1024" height="30"/>
+                                        <state key="normal" title="ASC/DESC"/>
+                                        <connections>
+                                            <action selector="sort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cs5-ND-CV3"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ont-zX-s5f">
+                                        <rect key="frame" x="0.0" y="80" width="1024" height="688"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HT9-Xm-5xO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Oi1-26-nZz"/>
+                            <constraint firstItem="HT9-Xm-5xO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cPc-Vh-C49"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HT9-Xm-5xO" secondAttribute="bottom" id="m48-61-2C6"/>
+                            <constraint firstItem="HT9-Xm-5xO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rSM-1T-Kmv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="mHn-fj-8ow" id="TmZ-iy-3Uk"/>
+                        <outlet property="sortButton" destination="ivP-hV-xPu" id="5br-td-ohy"/>
+                        <outlet property="tableView" destination="Ont-zX-s5f" id="4Ap-mX-6he"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
