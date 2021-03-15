@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A35DC99325F960F100FB35A4 /* SuffixUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35DC99225F960F100FB35A4 /* SuffixUtil.swift */; };
+		A35DC9D225F9635700FB35A4 /* Suffixes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35DC9D025F9635700FB35A4 /* Suffixes+CoreDataClass.swift */; };
+		A35DC9FA25F967F600FB35A4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35DC9F925F967F600FB35A4 /* CoreDataManager.swift */; };
+		A35DCA0825F96AE800FB35A4 /* Suffixes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35DCA0725F96AE800FB35A4 /* Suffixes+CoreDataProperties.swift */; };
+		A36E656C25FD227B00469538 /* SuffixesTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E656B25FD227B00469538 /* SuffixesTestingViewController.swift */; };
+		A3885C9625FE0F4100392121 /* TimeProfiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3885C9525FE0F4100392121 /* TimeProfiler.swift */; };
 		A3930C8425E048920045FC02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3930C8325E048920045FC02 /* AppDelegate.swift */; };
 		A3930C8625E048920045FC02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3930C8525E048920045FC02 /* SceneDelegate.swift */; };
-		A3930C8825E048920045FC02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3930C8725E048920045FC02 /* ViewController.swift */; };
 		A3930C8B25E048920045FC02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3930C8925E048920045FC02 /* Main.storyboard */; };
 		A3930C8D25E048950045FC02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3930C8C25E048950045FC02 /* Assets.xcassets */; };
 		A3930C9025E048950045FC02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3930C8E25E048950045FC02 /* LaunchScreen.storyboard */; };
@@ -18,7 +23,9 @@
 		A3930CBD25E0490B0045FC02 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3930CBC25E0490B0045FC02 /* ShareViewController.swift */; };
 		A3930CC025E0490B0045FC02 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3930CBE25E0490B0045FC02 /* MainInterface.storyboard */; };
 		A3930CC425E0490B0045FC02 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3930CBA25E0490B0045FC02 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A396168825E3FE4C00FCE9B1 /* Suffixes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A396168725E3FE4C00FCE9B1 /* Suffixes.swift */; };
+		A3A7E06C25F55E3200D8CD62 /* SuffixSequenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A7E06B25F55E3200D8CD62 /* SuffixSequenceViewController.swift */; };
+		A3A7E07725F55E8F00D8CD62 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3A7E07525F55E8F00D8CD62 /* DataModel.xcdatamodeld */; };
+		A3A7E0E825F56E1D00D8CD62 /* HistoryOfSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A7E0E725F56E1D00D8CD62 /* HistoryOfSharingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +67,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A35DC99225F960F100FB35A4 /* SuffixUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuffixUtil.swift; sourceTree = "<group>"; };
+		A35DC9D025F9635700FB35A4 /* Suffixes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Suffixes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A35DC9F925F967F600FB35A4 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		A35DCA0725F96AE800FB35A4 /* Suffixes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Suffixes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A36E656B25FD227B00469538 /* SuffixesTestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuffixesTestingViewController.swift; sourceTree = "<group>"; };
+		A3885C9525FE0F4100392121 /* TimeProfiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProfiler.swift; sourceTree = "<group>"; };
 		A3930C8025E048920045FC02 /* AppWithExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWithExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3930C8325E048920045FC02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3930C8525E048920045FC02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A3930C8725E048920045FC02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A3930C8A25E048920045FC02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3930C8C25E048950045FC02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3930C8F25E048950045FC02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,7 +92,9 @@
 		A3930CC125E0490B0045FC02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A396167225E3D55400FCE9B1 /* AppWithExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppWithExtension.entitlements; sourceTree = "<group>"; };
 		A396167F25E3D5D600FCE9B1 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
-		A396168725E3FE4C00FCE9B1 /* Suffixes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffixes.swift; sourceTree = "<group>"; };
+		A3A7E06B25F55E3200D8CD62 /* SuffixSequenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuffixSequenceViewController.swift; sourceTree = "<group>"; };
+		A3A7E07625F55E8F00D8CD62 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		A3A7E0E725F56E1D00D8CD62 /* HistoryOfSharingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOfSharingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +129,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3333AEC25FAB84C00BE367A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A3A7E07525F55E8F00D8CD62 /* DataModel.xcdatamodeld */,
+				A35DC9F925F967F600FB35A4 /* CoreDataManager.swift */,
+				A35DC9D025F9635700FB35A4 /* Suffixes+CoreDataClass.swift */,
+				A35DCA0725F96AE800FB35A4 /* Suffixes+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		A3930C7725E048920045FC02 = {
 			isa = PBXGroup;
 			children = (
@@ -140,15 +165,19 @@
 		A3930C8225E048920045FC02 /* AppWithExtension */ = {
 			isa = PBXGroup;
 			children = (
-				A396167225E3D55400FCE9B1 /* AppWithExtension.entitlements */,
 				A3930C8325E048920045FC02 /* AppDelegate.swift */,
 				A3930C8525E048920045FC02 /* SceneDelegate.swift */,
-				A3930C8725E048920045FC02 /* ViewController.swift */,
-				A396168725E3FE4C00FCE9B1 /* Suffixes.swift */,
+				A3333AEC25FAB84C00BE367A /* CoreData */,
+				A3A7E06B25F55E3200D8CD62 /* SuffixSequenceViewController.swift */,
+				A3A7E0E725F56E1D00D8CD62 /* HistoryOfSharingViewController.swift */,
+				A36E656B25FD227B00469538 /* SuffixesTestingViewController.swift */,
+				A3885C9525FE0F4100392121 /* TimeProfiler.swift */,
+				A35DC99225F960F100FB35A4 /* SuffixUtil.swift */,
 				A3930C8925E048920045FC02 /* Main.storyboard */,
 				A3930C8C25E048950045FC02 /* Assets.xcassets */,
 				A3930C8E25E048950045FC02 /* LaunchScreen.storyboard */,
 				A3930C9125E048950045FC02 /* Info.plist */,
+				A396167225E3D55400FCE9B1 /* AppWithExtension.entitlements */,
 			);
 			path = AppWithExtension;
 			sourceTree = "<group>";
@@ -343,9 +372,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3930C8825E048920045FC02 /* ViewController.swift in Sources */,
-				A396168825E3FE4C00FCE9B1 /* Suffixes.swift in Sources */,
+				A36E656C25FD227B00469538 /* SuffixesTestingViewController.swift in Sources */,
+				A35DC9D225F9635700FB35A4 /* Suffixes+CoreDataClass.swift in Sources */,
+				A3885C9625FE0F4100392121 /* TimeProfiler.swift in Sources */,
+				A35DC99325F960F100FB35A4 /* SuffixUtil.swift in Sources */,
+				A35DCA0825F96AE800FB35A4 /* Suffixes+CoreDataProperties.swift in Sources */,
+				A3A7E06C25F55E3200D8CD62 /* SuffixSequenceViewController.swift in Sources */,
+				A3A7E07725F55E8F00D8CD62 /* DataModel.xcdatamodeld in Sources */,
 				A3930C8425E048920045FC02 /* AppDelegate.swift in Sources */,
+				A35DC9FA25F967F600FB35A4 /* CoreDataManager.swift in Sources */,
+				A3A7E0E825F56E1D00D8CD62 /* HistoryOfSharingViewController.swift in Sources */,
 				A3930C8625E048920045FC02 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,6 +789,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A3A7E07525F55E8F00D8CD62 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A3A7E07625F55E8F00D8CD62 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = A3A7E07625F55E8F00D8CD62 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A3930C7825E048920045FC02 /* Project object */;
 }

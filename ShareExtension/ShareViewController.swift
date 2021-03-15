@@ -29,7 +29,7 @@ class ShareViewController: SLComposeServiceViewController {
 					if attachment.hasItemConformingToTypeIdentifier(contentType) {
 						attachment.loadItem(forTypeIdentifier: contentType, options: nil) { data, error in
 							guard let text = data as? String else { return }
-							UserDefaults(suiteName: "group.com.Zelinskaya.ShareExtension")?.set(text, forKey: "textString")
+							UserDefaults(suiteName: "group.com.Zelinskaya.ShareExtension")?.set(text, forKey: "ShareExtensionText")
 							
 							guard let url = URL(string: "AppWithExtension://") else { return }
 							self.openURL(url)

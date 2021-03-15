@@ -1,23 +1,25 @@
 //
-//  ViewController.swift
+//  SuffixSequenceViewController.swift
 //  AppWithExtension
 //
 //  Created by Zelinskaya Anna on 19.02.2021.
 //
 
 import UIKit
+import Foundation
+import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SuffixSequenceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
 	
 	@IBOutlet weak var sortButton: UIButton!
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var segmentedControl: UISegmentedControl!
 	
 	var suffixes : [Dictionary<String, Int>.Element] = []
-	var allSuffixes : [Dictionary<String, Int>.Element] = []
+	var nonRepeatSuffixes : [Dictionary<String, Int>.Element] = []
 	var threeLetterSuffixes : [Dictionary<String, Int>.Element] = []
 	var fiveLetterSuffixes : [Dictionary<String, Int>.Element] = []
-	var textString = ""
+	var sharedText = ""
 	var sortAsc = true
 	
 	override func viewDidLoad() {
@@ -37,14 +39,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	
 	@IBAction func sort(_ sender: Any) {
 		sortAsc = !sortAsc
-		allSuffixes = allSuffixes.sorted(by: { sortAsc ? $0.0 < $1.0 : $0.0 > $1.0 })
-		setupSuffixes(allSuffixes)
+		nonRepeatSuffixes = nonRepeatSuffixes.sorted(by: { sortAsc ? $0.0 < $1.0 : $0.0 > $1.0 })
+		setupSuffixes(nonRepeatSuffixes)
 	}
 	
 	@IBAction func indexChanged(_ sender: Any) {
 		switch segmentedControl.selectedSegmentIndex {
 		case 0:
-			setupSuffixes(allSuffixes)
+			setupSuffixes(nonRepeatSuffixes)
 			sortButton.isHidden = false
 		case 1:
 			setupSuffixes(threeLetterSuffixes)
@@ -72,16 +74,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	}
 	
 	@objc func updateSuffixes() {
-		
-		if let textStr = UserDefaults(suiteName: "group.com.Zelinskaya.ShareExtension")?.value(forKey: "textString") as? String {
-			textString = textStr
-			UserDefaults(suiteName: "group.com.Zelinskaya.ShareExtension")?.removeObject(forKey: "textString")
+		guard let textStr = UserDefaults(suiteName: "group.com.Zelinskaya.ShareExtension")?.value(forKey: "ShareExtensionText") as? String,
+			  !textStr.isEmpty,
+			  textStr != sharedText
+		else {
+			return
 		}
+			
+		sharedText = textStr
 		
-		let suffixesCreator = SuffixesCreator.init(text: textString)
-		allSuffixes = suffixesCreator.allSuffixes.sorted(by: { $0.0 < $1.0 })
+		let suffixesCreator = SuffixesCreator.init(text: sharedText)
+		nonRepeatSuffixes = suffixesCreator.nonRepeatSuffixes.sorted(by: { $0.0 < $1.0 })
 		threeLetterSuffixes = Array(suffixesCreator.threeLetterSuffixes.sorted(by: { $0.1 > $1.1 }).prefix(10))
 		fiveLetterSuffixes = Array(suffixesCreator.fiveLetterSuffixes.sorted(by: { $0.1 > $1.1 }).prefix(10))
+		
+		if (suffixesCreator.allSuffixes.count > 0) {
+			let managedObject = Suffixes()
+			managedObject.creationDate = Date()
+			managedObject.array = suffixesCreator.allSuffixes
+			CoreDataManager.instance.saveContext()
+		}
 		
 		indexChanged(segmentedControl as Any)
 	}
